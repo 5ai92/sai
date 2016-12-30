@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>DJANGO UNCHAINED</title>
+<meta charset="utf-8" />
+{% load staticfiles %}
+<link rel='stylesheet' href="{% static 'home/css/bootstrap.min.css' %}" type='text/css' />
+<link href="{% static 'home/custom.css' %}" type = 'text/css' />
+<meta name="viewport" content = "width-device-width" initial-scale="1.0">
+
+<style type="text/css">
+	html,
+	body{
+		height:100%;
+	}
+	h2{
+		font-family:comic Sans MS;
+		padding-top: 1px;
+		color: gold;
+	}
+	p{
+		font-family:fantasy;
+		font-weight: 600;
+	}
+</style>
+</head>
+<body class="body" style="background-color:white">
+<nav class="navbar navbar-default">
+  <div class="container-fluid" style="background-color:black;">
+  	<div class ="row">
+  	<div class= "col-md-4">
+     		<div class="navbar-header">    		
+      			<a class="navbar-brand" href="#">
+       			 <img alt="Brand" src="http://pngimg.com/upload/mango_PNG9184.png" class = imgh-responsive style ='max-height:50px;border-radius:50%'>
+     			 </a>
+    		</div>
+    	</div>
+  		<div class="col-md-7">
+    		<h2></h2>
+     	</div>
+     	<div class="col-md-1">
+     		<br>
+     		<img alt="profile" src ="{%static 'home/img/profile.jpg' %}" class = img-responsive style ='max-height:50px;border-radius:50%'>
+        </div>
+  	</div>
+  </div>
+</nav>
+	
+		<div class="row">
+			<div class="col-md-2">
+				<br>
+					<div class="well bs-sidebar affix" id ="sidebar" style ="background-color:#fff">
+						<ul class="nav nav-pills nav-stacked">
+							<li><a href='/'>Home</a></li>
+							<li><a href='/blog'>Blog</a></li>
+							<li><a href='/stocks'>My Stocks</a></li>										
+							<li><a href='/contact'>Contact</a></li>
+						</ul>
+					</div><!--class nav bar closed -->
+				</div><!--class col closed -->
+				<div class = "col-sm-10">
+					<div class = "container-fluid">
+						<br><br>
+						{%block content%}
+						{%endblock%}
+					</div><!--class body closed -->
+				</div><!--class col closed -->
+			</div><!--class row closed -->
+		</div><!--class main container closed -->
+
+	<!--<footer>
+		<div class="container-fluid" style ="margin-left:15px;position:fixed;left:0px;bottom:0px height:30px;width:100%;">
+			<p> <a href="#" target="blank">Contact</a> | <a href="#" target="blank">LinkedIn</a> | <a href ="#" target="blank">Twitter</a> | <a href="#" target ="blank"> Google+</a>
+			</p>
+		</div>
+	</footer> -->
+</body>
+</html>
+
